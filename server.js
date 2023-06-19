@@ -14,7 +14,7 @@ import CategoryRoutes from "./routes/CategoryRoutes.js";
 
 import ProductRoutes from "./routes/ProductRoutes.js";
 
-// import path from "path";
+
 
 //CONFIG ENV
 
@@ -30,17 +30,13 @@ const app = Express();
 app.use(cors());
 app.use(Express.json());
 app.use(morgan("dev"));
-// app.use(Express.static(path.join(__dirname, "./client/build")));
+
 
 // --- ROUTES ---
 app.use(AuthRoutes);
 app.use(CategoryRoutes);
 app.use(ProductRoutes);
 
-// //API
-// app.use("*", function (req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
 
 //PORT
 const PORT = process.env.PORT || 8000;
